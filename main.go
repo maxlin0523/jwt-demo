@@ -32,7 +32,8 @@ func main() {
 
 	token, err := jwtToken.Generate(claims)
 	if err != nil {
-
+		fmt.Printf("Error generating JWT: %v\n", err)
+		return
 	}
 	fmt.Println("Token: ", token)
 
